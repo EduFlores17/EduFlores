@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -8,29 +8,41 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 function Projects() {
   const projects = [
     {
-      title: "Portafolio personal",
-      description: "Sitio web donde muestro quién soy, mis habilidades y proyectos.",
+      title: "BarberTap",
+      description: "Plataforma web de practica para agendar citas y ofrecer productos y servicios.",
       link: "https://edufloresfile.netlify.app/",
-      image: "/dddd.png",
+      image: "/barbertap.jpg",
     },
     {
-      title: "App de tareas",
-      description: "Aplicación web simple para aaaaaaaaaa aaaa gestionar tareas.",
+      title: "Bienes Raices",
+      description: "Sitio web de practica enfocado a un asesor inmobiliario, enfocado al rol frontend.",
+      link: "https://github.com/EduFlores17/bienesraices_inicio",
+      image: "/bienesraices.jpg",
+    },
+    {
+      title: "InsanaMusic24",
+      description: "Sitio web de practica diseño UI/UX para un festival de musica ficticio.",
+      link: "https://insanamusic24.netlify.app/",
+      image: "/insanamusic.jpg",
+    },
+    {
+      title: "Policard",
+      description: "Sistema de credencialización digitalizada para la Universidad Politécnica de Tapachula.",
       link: "#",
-      image: "/azteca.jpg",
+      image: "/policard.jpg",
     },
     {
-      title: "Portafolio personal",
-      description: "Sitio web donde muestro quién soy, mis habilidades y proyectos.",
+      title: "EduFloresv1",
+      description: "Primer portafolio usado para presentarme y enseñar mis proyectos personales.",
       link: "https://edufloresfile.netlify.app/",
-      image: "/dddd.png",
+      image: "/yo.png",
     },
     {
-      title: "App de tareas",
-      description: "Aplicación web simple para aaaaaaaaaa aaaa gestionar tareas.",
-      link: "#",
-      image: "/azteca.jpg",
-    },
+      title: "Ingles Individual App",
+      description: "App tipo CRM/ESP para la institución con sede en Tapachula como estadía profesional.",
+      link: "https://edufloresfile.netlify.app/",
+      image: "/ii.jpg",
+    }
   ];
 
   return (
@@ -39,7 +51,7 @@ function Projects() {
 
       <div className="relative">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={24}
           slidesPerView={1}
           pagination={{
@@ -49,6 +61,11 @@ function Projects() {
           navigation={{
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
+          }}
+          autoplay={{
+            delay: 2000,
+            speed: 1200,
+            disableOnInteraction: false,
           }}
           breakpoints={{
             768: { slidesPerView: 2 },
@@ -73,10 +90,10 @@ function Projects() {
           ))}
         </Swiper>
 
-        {/* Bullets de paginación más separados */}
+        {/* Paginación */}
         <div className="swiper-pagination mt-10 flex justify-center" />
 
-        {/* Botones personalizados más separados y mejor posicionados */}
+        {/* Botones de navegación */}
         <button className="swiper-prev absolute -left-6 top-[45%] transform -translate-y-1/2 bg-white dark:bg-gray-800 shadow p-2 rounded-full z-10 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
           <ChevronLeft className="w-6 h-6 text-black dark:text-white" />
         </button>
