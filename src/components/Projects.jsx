@@ -10,7 +10,7 @@ function Projects() {
     {
       title: "TeMenú",
       description: "Plataforma web de Menú Digital dirigida a restaurantes (En desarrollo y práctica).",
-      link: "https://edufloresfile.netlify.app/",
+      link: "https://te-menu.vercel.app/",
       image: "/Temenu.jpg",
     },
     {
