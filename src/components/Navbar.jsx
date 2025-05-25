@@ -39,7 +39,7 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-slate-950 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold dark:text-white">EduFlores</h1>
+        <h1 className="text-xl font-bold dark:text-white"><a href="#hero">EduFlores</a> </h1>
 
         {/* Menú Desktop */}
         <ul className="hidden md:flex gap-6">
