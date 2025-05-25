@@ -4,7 +4,7 @@ function About() {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-white dark:bg-gray-900 text-center">
+    <section id="about" className="py-20 px-6 bg-white pt-24 dark:bg-gray-900 text-center">
       <h2 className="text-3xl font-bold mb-4 dark:text-white">Sobre mí</h2>
       <p className="text-gray-700 dark:text-white max-w-2xl mx-auto mb-6">
         Tengo 22 años y soy egresado de Ingeniería en Software. Me estoy preparando en inglés, React, JavaScript, bases de datos y más. Busco mi primera oportunidad como desarrollador junior.

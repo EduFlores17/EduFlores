@@ -5,3 +5,7 @@
 .swiper-pagination {
   @apply mt-10 flex justify-center gap-2;
 }
+
+html {
+  scroll-behavior: smooth;
+}
