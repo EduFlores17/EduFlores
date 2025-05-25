@@ -8,6 +8,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 function Projects() {
   const projects = [
     {
+      title: "TeMenú",
+      description: "Plataforma web de Menú Digital dirigida a restaurantes (En desarrollo y práctica).",
+      link: "https://edufloresfile.netlify.app/",
+      image: "/Temenu.jpg",
+    },
+    {
       title: "BarberTap",
       description: "Plataforma web de practica para agendar citas y ofrecer productos y servicios.",
       link: "https://edufloresfile.netlify.app/",
