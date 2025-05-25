@@ -69,8 +69,8 @@ function Projects() {
             prevEl: '.swiper-prev',
           }}
           autoplay={{
-            delay: 2000,
-            speed: 1200,
+            delay: 3000,
+            speed: 4200,
             disableOnInteraction: false,
           }}
           breakpoints={{

@@ -32,7 +32,7 @@ function Hero() {
             📧 fedu17t@gmail.com
           </p>
 
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 mb-4 justify-center lg:justify-start">
             <a href="https://github.com/EduFlores17" target="_blank" className="text-gray-700 dark:text-white hover:text-blue-500">
               <FaGithub size={24} />
             </a>
@@ -51,7 +51,7 @@ function Hero() {
         </div>
 
         {/* Caja de educación */}
-        <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-6">
+        <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-6 mb-6">
           <h2 className="text-2xl font-semibold mb-4 dark:text-white">Educación</h2>
           <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
             <li>CBTIS 88 - Técnico en Programación (2017-2020)</li>
