@@ -16,30 +16,18 @@ function About() {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-white pt-25 dark:bg-gray-900 text-center">
-      <h2 className="text-3xl font-bold mb-4 dark:text-white">Sobre mí</h2>
-      <p className="text-gray-700 dark:text-white max-w-2xl mx-auto mb-6">
-        Tengo 23 años y soy egresado de Ingeniería en Software. Me estoy preparando en inglés, React, JavaScript, bases de datos y más Tecnologías Frontend con conocimientos básicos en Backend. Busco mi primera oportunidad laboral como desarrollador web.
-      </p>
-      <h3 className="text-xl dark:text-white font-semibold mb-4">Tecnologías que manejo:</h3>
-      <div className="flex flex-wrap justify-center gap-4">
-        {skills.map((skill, idx) => (
-          <div key={idx} className="relative group">
-            <span
-              className="flex items-center gap-2 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium 
-                         dark:bg-blue-900 dark:text-blue-200 transition transform hover:scale-105 cursor-default"
-            >
-              {skill.icon}
-              {skill.name}
-            </span>
-            {/* Tooltip */}
-            <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition duration-200 bg-black text-white text-xs rounded px-2 py-1 z-10">
-              {skill.name}
-            </div>
-          </div>
-        ))}
+    <section id="about" className="py-20 px-6 bg-white dark:bg-gray-950 text-center">
+  <h2 className="text-3xl font-bold mb-8 dark:text-white">Tecnologías que manejo:</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 justify-items-center">
+    {skills.map((skill, idx) => (
+      <div key={idx} className="group w-24 h-24 flex flex-col items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-center p-4 shadow hover:scale-105 transition-all cursor-default">
+        <div className="text-4xl mb-2">{skill.icon}</div>
+        <span className="text-sm font-semibold dark:text-white">{skill.name}</span>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   );
 }
 

@@ -2,63 +2,100 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center items-center px-6 bg-gray-100 pt-24 dark:bg-slate-950 text-center sm:text-left lg:flex-row">
-      
-      {/* Columna izquierda: Imagen y saludo */}
-      <div className="flex flex-col items-center lg:items-start mb-12 lg:mb-0 lg:w-1/2">
-        <img
-          src="/yo.png"
-          alt="Foto de Eduardo Flores"
-          className="w-55 h-55 rounded-full mb-6 border-4 border-blue-500 object-cover"
-        />
-        <h1 className="text-4xl font-bold mb-4 dark:text-white">Hola, Soy Eduardo Flores</h1>
-        <p className="text-xl text-gray-700 dark:text-gray-100 max-w-md">
-          Desarrollador Web Junior especializado en frontend. Me apasiona crear interfaces limpias, modernas y funcionales.
-        </p>
-        <a href="#projects" className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
-          Ver mis proyectos
-        </a>
-      </div>
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 bg-slate-950 pt-18"
+    >
+      <div className="w-full max-w-5xl space-y-10">
 
-      {/* Columna derecha: Sobre mí + Educación */}
-      <div className="flex flex-col gap-6 max-w-md w-full lg:w-1/2">
-        
-        {/* Caja de info personal */}
-        <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold mb-4 dark:text-white">Acerca de mí:</h2>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            👨‍🎓 Ingeniero de Software <br />
-            📍 Tapachula, Chiapas, México. <br />
-            📧 fedu17t@gmail.com
-          </p>
-
-          <div className="flex gap-4 mb-4 justify-center lg:justify-start">
-            <a href="https://github.com/EduFlores17" target="_blank" className="text-gray-700 dark:text-white hover:text-blue-500">
-              <FaGithub size={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/eduardo-flores-de-le%C3%B3n-27019b248/" target="_blank" className="text-gray-700 dark:text-white hover:text-blue-500">
-              <FaLinkedin size={24} />
-            </a>
+        {/* Hero Principal */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 text-center lg:text-left">
+          {/* Imagen */}
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src="/yo.png"
+              alt="Eduardo Flores"
+              className="w-48 h-48 sm:w-60 sm:h-60 md:w-64 md:h-64 rounded-full border-4 border-blue-500 object-cover transition-transform hover:scale-105"
+            />
           </div>
 
-          <a
-            href="/CV2025 - Eduardo Flores de León.pdf"
-            download
-            className="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
-          >
-            Descargar CV
-          </a>
+          {/* Texto principal */}
+          <div className="flex-1 space-y-6">
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+              Hola, Soy <span className="text-blue-400">Eduardo Flores</span>
+            </h1>
+            <p className="text-gray-300 text-base sm:text-lg">
+              Desarrollador Web Junior especializado en frontend. Me apasiona crear interfaces limpias,
+              modernas y funcionales. Tengo 23 años y soy egresado de Ingeniería en Software. Me estoy preparando en inglés, React, JavaScript, bases de datos
+              y más tecnologías Frontend, con conocimientos básicos en Backend. Busco mi primera oportunidad laboral como desarrollador web.
+            </p>
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition"
+            >
+              Ver mis proyectos
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        {/* Caja de educación */}
-        <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-6 mb-6">
-          <h2 className="text-2xl font-semibold mb-4 dark:text-white">Educación</h2>
-          <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
-            <li>CBTIS 88 - Técnico en Programación (2017-2020)</li>
-            <li>Universidad Politécnica de Tapachula (UPTAP) - Ingeniería de Software (2020-2024)</li>
+        {/* Acerca de mí y Contacto */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Acerca de mí */}
+          <div className="bg-slate-800 p-6 rounded-xl text-gray-200 shadow-md text-center sm:text-left">
+            <h2 className="text-xl font-semibold mb-2 text-white">Acerca de mí:</h2>
+            <p>🎓 Ingeniero de Software</p>
+            <p>📍 Tapachula, Chiapas, México</p>
+            <p>📧 fedu17t@gmail.com</p>
+          </div>
+
+          {/* Contacto */}
+          <div className="bg-slate-800 p-6 rounded-xl text-gray-200 shadow-md text-center sm:text-left">
+            <h2 className="text-2xl font-semibold mb-4 text-white">Contacto</h2>
+            <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-4 flex-wrap">
+              <a
+                href="https://linkedin.com/in/tu_usuario"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-400 transition text-4xl"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/tu_usuario"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-400 transition text-4xl"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="/EduardoFloresCV.pdf"
+                download
+                className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-lg"
+              >
+                Descargar CV
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Educación */}
+        <div className="bg-slate-800 p-6 rounded-xl text-gray-200 shadow-md text-center sm:text-left mb-6">
+          <h2 className="text-xl font-semibold mb-2 text-white">Educación</h2>
+          <ul className="list-disc list-inside space-y-1">
+            <li>CBTIS 88 – Técnico en Programación (2017–2020)</li>
+            <li>UPTAP – Ingeniería de Software (2020–2024)</li>
           </ul>
         </div>
-
       </div>
     </section>
   );

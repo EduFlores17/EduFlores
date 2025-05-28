@@ -4,55 +4,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { projects } from '../data/projects';
+
+
 
 function Projects() {
-  const projects = [
-    {
-      title: "TeMenú",
-      description: "Plataforma web de Menú Digital dirigida a restaurantes (En desarrollo y práctica).",
-      link: "https://te-menu.vercel.app/",
-      image: "/Temenu.jpg",
-    },
-    {
-      title: "BarberTap",
-      description: "Plataforma web de practica para agendar citas y ofrecer productos y servicios.",
-      link: "https://edufloresfile.netlify.app/",
-      image: "/barbertap.jpg",
-    },
-    {
-      title: "Bienes Raices",
-      description: "Sitio web de practica enfocado a un asesor inmobiliario, enfocado al rol frontend.",
-      link: "https://github.com/EduFlores17/bienesraices_inicio",
-      image: "/bienesraices.jpg",
-    },
-    {
-      title: "InsanaMusic24",
-      description: "Sitio web de practica diseño UI/UX para un festival de musica ficticio.",
-      link: "https://insanamusic24.netlify.app/",
-      image: "/insanamusic.jpg",
-    },
-    {
-      title: "Policard",
-      description: "Sistema de credencialización digitalizada para la Universidad Politécnica de Tapachula.",
-      link: "#",
-      image: "/policard.jpg",
-    },
-    {
-      title: "EduFloresv1",
-      description: "Primer portafolio usado para presentarme y enseñar mis proyectos personales.",
-      link: "https://edufloresfile.netlify.app/",
-      image: "/yo.png",
-    },
-    {
-      title: "Ingles Individual App",
-      description: "App tipo CRM/ESP para la institución con sede en Tapachula como estadía profesional.",
-      link: "https://edufloresfile.netlify.app/",
-      image: "/ii.jpg",
-    }
-  ];
+
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-16 bg-gray-100 dark:bg-gray-950 text-center">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-16 bg-gray-100  dark:bg-gray-900  text-center">
       <h2 className="text-4xl font-bold mb-12 dark:text-white">Proyectos</h2>
 
       <div className="relative">
@@ -80,19 +41,29 @@ function Projects() {
         >
           {projects.map((proj, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex flex-col h-full">
-                <img src={proj.image} alt={proj.title} className="w-full h-48 object-cover rounded-xl mb-4" />
-                <h3 className="text-2xl font-semibold dark:text-white mb-2">{proj.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1">{proj.description}</p>
-                <a
-                  href={proj.link}
-                  target="_blank"
-                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-                >
+              <div className="bg-white dark:bg-gray-950 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-3 flex flex-col h-full">
+                <div className="w-full aspect-square overflow-hidden rounded-lg mb-3">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{proj.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 flex-1">{proj.description}</p>
+                <Link to={`/projects/${proj.id}`} className="mt-auto inline-block px-3 py-1.5 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 transition">
                   Ver proyecto
-                </a>
+                </Link>
+
+
+                
+
+
+
               </div>
             </SwiperSlide>
+
+
           ))}
         </Swiper>
 
